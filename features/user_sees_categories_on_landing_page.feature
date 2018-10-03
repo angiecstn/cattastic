@@ -4,6 +4,10 @@ Feature: List categories on the landing page
   I would like to be able see a list of categories.
 
   Scenario: View categories on landing page
+    Given the following categories exists
+      | category  | 
+      | Fluffiest | 
+      | Angriest  |
     When I visit the site
     Then I should see "Fluffiest"
     And I should see "Angriest"
