@@ -1,3 +1,3 @@
-Then("I should see the image with id {string}") do |string|
-    expect(page).to have_xpath("//img[contains(@src,'#{image}')]")
+Then("I should see {string} images") do |number|
+    expect(page).to have_css, ('.imageclass', count: number)
 end
