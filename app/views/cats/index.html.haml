@@ -1,4 +1,3 @@
 %h1 Welcome to Cattastic!
-- @cats.each do |cat|
-    .cat.image
+- @cats_fetched.each do |cat|
     = image_tag cat['url']
