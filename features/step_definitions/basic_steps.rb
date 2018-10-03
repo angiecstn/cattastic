@@ -3,3 +3,4 @@ Given("the following categories exists") do |table|
       Category.create!(category)
     end
 end
+
