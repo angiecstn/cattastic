@@ -1,7 +1,5 @@
 class CatsController < ApplicationController
-  include FetchCatService
-  
   def index
-    @cats = Cat.all
+    @cats = FetchCatService.get_cat_image
   end
 end
