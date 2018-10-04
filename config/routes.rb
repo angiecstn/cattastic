@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root controller: :categories, action: :index
+  root controller: :cats, action: :index
+  resources :categories, only: [:index]
 end

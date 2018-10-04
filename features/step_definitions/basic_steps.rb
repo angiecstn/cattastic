@@ -1,5 +1,7 @@
-Given("the following categories exists") do |table|
-    table.hashes.each do |category|
-      Category.create!(category)
-    end
+Given("I am on the landing page") do
+    visit root_path
+end
+
+Then ("show me the page") do
+    save_and_open_page
 end
