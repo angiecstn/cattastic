@@ -4,12 +4,12 @@
     I would like to be able to click on different category buttons.
 
     Background: 
-        Given I am on the landing page
-        And the following categories exist
-        | title     | 
-        | Fluffiest | 
-        | Angriest  |
+        Given the following categories exist
+            | title     | 
+            | Fluffiest | 
+            | Angriest  |
+        And I am on the landing page
 
     Scenario: User can navigate different pages by using buttons
         When I click "Fluffiest" button
-        Then I should be on fluffiest page
+        Then I should be on "Fluffiest" page

@@ -9,7 +9,8 @@ end
 When("I click {string} button") do |link_name|
     click_on link_name
 end
-  
-Then("I should be on fluffiest page") do
-    expect(current_path).to eq category_path
+
+Then("I should be on {string} page") do |category_title|
+    category = Category.find_by_title(category_title)
+    expect(current_path).to eq category_path(category)
 end
