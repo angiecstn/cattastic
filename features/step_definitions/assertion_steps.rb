@@ -11,6 +11,3 @@ Then("I should be on {string} page") do |category_title|
     expect(current_path).to eq category_path(category)
 end
 
-When("I click {string} button") do |link_name|
-    click_on link_name
-end
