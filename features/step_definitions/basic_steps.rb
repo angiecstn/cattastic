@@ -2,8 +2,12 @@ Given("I am on the landing page") do
     visit root_path
 end
 
-Given("the following categories exists") do |table|
+Given("the following categories exist") do |table|
     table.hashes.each do |category|
-      Category.create!(category)
+      Category.create(category)
     end
+end
+
+Then ("show me the page") do
+    save_and_open_page
 end
