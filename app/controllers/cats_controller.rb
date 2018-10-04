@@ -6,8 +6,9 @@ class CatsController < ApplicationController
 
   def create
     @cats = FetchCatService.get_cat_image
-    cat1 = Cat.create(url: @cats.first['url'])
-    cat2 = Cat.create(url: @cats.last['url'])
+    @cats.each do |cat|
+      cat= Cat.create(url: cat['url'])
+    end
     binding.pry
   end
 end
