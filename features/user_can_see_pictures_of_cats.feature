@@ -1,3 +1,4 @@
+@javascript
 Feature: User can see pictures of cats
 
     As a user,
