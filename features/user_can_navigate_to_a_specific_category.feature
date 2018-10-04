@@ -4,8 +4,8 @@
     I would like to be able to click on different category buttons.
 
     Background: 
-        Given I visit the site
-        And the following categories exists
+        Given I am on the landing page
+        And the following categories exist
         | title     | 
         | Fluffiest | 
         | Angriest  |
