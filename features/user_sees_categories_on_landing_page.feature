@@ -1,3 +1,4 @@
+@javascript
 Feature: List categories on the landing page
   As a user,
   when I visit the landing page,
