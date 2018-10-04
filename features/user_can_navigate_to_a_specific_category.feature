@@ -5,6 +5,10 @@
 
     Background: 
         Given I visit the site
+        And the following categories exists
+        | title     | 
+        | Fluffiest | 
+        | Angriest  |
 
     Scenario: User can navigate different pages by using buttons
         When I click "Fluffiest" button
