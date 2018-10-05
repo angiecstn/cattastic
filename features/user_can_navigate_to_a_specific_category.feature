@@ -11,5 +11,5 @@
         And I am on the landing page
 
     Scenario: User can navigate different pages by using buttons
-        When I click "Fluffiest" button
+        When I click "Fluffiest" 
         Then I should be on "Fluffiest" page
