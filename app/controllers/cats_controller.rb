@@ -1,9 +1,20 @@
 class CatsController < ApplicationController  
   before_action :load_categories
-  before_action :set_cats
+  before_action :set_cats, :upvote, :downvote
  
   def index
   end
+
+  def upvote
+    @cat.upvote_from current_user
+    redirect_to route_path
+  end
+
+  def downvote
+    @cat.downvote_from current_user
+    redirect_to route_path 
+  end
+
 
   private
 
