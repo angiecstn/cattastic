@@ -6,6 +6,10 @@ Then ("show me the page") do
     save_and_open_page
 end
 
-When("I click {string} button") do |category_name|
+When("I click {string}") do |category_name|
     click_on category_name
+end
+
+When("I fill in {string} with {string}") do |field, data|
+    fill_in field, with: data
 end
