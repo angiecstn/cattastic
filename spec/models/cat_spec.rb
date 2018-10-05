@@ -13,10 +13,7 @@ RSpec.describe Cat, type: :model do
   describe 'Saving links' do
     it 'should save presented image link if not already present in DB' do
       test_cat = create(:cat)
-      if Cat.exists?(url: "https://testurl.com")
-      else
-        test_cat2 = create(:cat)
-      end
+      test_cat2 = create(:cat) unless Cat.exists?(url: "https://testurl.com")
       expect(Cat.count).to eq 1
       expect(Cat.exists?(url: "https://testurl.com")).to be_truthy
     end
