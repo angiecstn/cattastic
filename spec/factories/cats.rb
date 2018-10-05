@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :cat do
-    url { "MyText" }
+    url { "https://testurl.com" }
   end
 end
