@@ -8,7 +8,10 @@ class CatsController < ApplicationController
 
   def create
     @cats.each do |cat|
-      cat= Cat.create(url: cat['url'])
+      if Cat.exists?(url: cat['url'])
+      else
+        cat= Cat.create(url: cat['url'])
+      end
     end
   end
 
