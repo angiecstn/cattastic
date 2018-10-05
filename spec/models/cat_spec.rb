@@ -17,6 +17,17 @@ RSpec.describe Cat, type: :model do
     end
   end
 
+  describe 'Saving links' do
+    it 'should save presented image link if not already present in DB' do
+      test_cat = create(:cat)
+      if Cat.exists?(url: "https://testurl.com")
+      else
+        test_cat2 = create(:cat)
+      end
+      expect(Cat.count).to eq 1
+    end
+  end
+
   describe 'Factory' do
     it 'should have valid Factory' do
       expect(create(:cat)).to be_valid 
