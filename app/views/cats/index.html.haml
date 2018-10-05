@@ -1,5 +1,10 @@
 %h1 Welcome to Cattastic!
-- @cats.each do |cat|
-    .cat
-        = image_tag cat['url']
+
+%section.container
+    %h1 The competitors
+    %div.grid-container
+        - @cats.each do |cat|
+            .div.grid-content
+                = image_tag cat['url']
+
 = render 'partials/categories'

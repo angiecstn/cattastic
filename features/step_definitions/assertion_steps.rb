@@ -1,5 +1,5 @@
 Then("I should see {string} images") do |number| 
-    expect(page).to have_css '.cat', count: number
+    expect(page).to have_css '.grid-content', count: number
 end
   
 Then("I should see {string}") do |content|
